@@ -2,6 +2,26 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  padding-top: 8vh;
+}
+.input label {
+  margin-right: 10px;
+}
+.input input {
+  height: 100%;
+  text-align: center;
+  font-size: inherit;
+}
+.input {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
 .etch {
   width: 500px;
   height: 500px;
@@ -37,6 +57,7 @@ img {
   gap: 25px;
   margin-top: 20px;
 }
+
 .buttons .delete {
   height: fit-content;
   padding: 20px;
