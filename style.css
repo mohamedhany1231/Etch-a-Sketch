@@ -15,9 +15,24 @@
 
 .eraser {
   width: 100px;
-  margin-top: 20px;
 }
 
 img {
   width: 100%;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+.buttons .delete {
+  height: fit-content;
+  padding: 20px;
+  font-size: 30px;
+}
+
+[class^="column"]:hover {
+  background-color: rgb(205, 229, 250);
 }

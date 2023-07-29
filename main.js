@@ -3,7 +3,16 @@ let etchDiv = document.querySelector(".etch");
 let mouseDown = false;
 let eraserSelected = false;
 let eraser = document.querySelector(".eraser img");
+let deleteBtn = document.querySelector(".buttons .delete");
 
+// deletebtn function
+deleteBtn.onclick = () => {
+  let boxes = Array.from(etchDiv.querySelectorAll("div[class^='column']"));
+  console.log();
+  boxes.forEach((box) => {
+    box.style.backgroundColor = "aliceBlue";
+  });
+};
 // toggle eraser
 eraser.onclick = () => {
   eraserSelected = !eraserSelected;
@@ -13,7 +22,7 @@ eraser.onclick = () => {
 // function to draw
 function draw(box) {
   if (eraserSelected) {
-    box.style.backgroundColor = "aliceblue";
+    box.style.backgroundColor = "aliceBlue";
   } else box.style.backgroundColor = "black";
 }
 window.addEventListener("mousedown", () => {
@@ -32,6 +41,9 @@ for (let i = 0; i < numberOfDivs; i++) {
     row.append(column);
     column.addEventListener("mouseover", () => {
       if (mouseDown) draw(column);
+    });
+    column.addEventListener("click", () => {
+      draw(column);
     });
   }
   etchDiv.append(row);
