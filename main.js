@@ -1,9 +1,20 @@
 let numberOfDivs = 16;
 let etchDiv = document.querySelector(".etch");
 let mouseDown = false;
+let eraserSelected = false;
+let eraser = document.querySelector(".eraser img");
+
+// toggle eraser
+eraser.onclick = () => {
+  eraserSelected = !eraserSelected;
+  if (eraserSelected) eraser.setAttribute("src", "images/pencil.png");
+  else eraser.setAttribute("src", "images/eraser.png");
+};
 // function to draw
 function draw(box) {
-  box.style.backgroundColor = "black";
+  if (eraserSelected) {
+    box.style.backgroundColor = "aliceblue";
+  } else box.style.backgroundColor = "black";
 }
 window.addEventListener("mousedown", () => {
   mouseDown = true;

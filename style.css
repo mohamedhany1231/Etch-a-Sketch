@@ -12,3 +12,12 @@
   height: 100%;
   background-color: aliceblue;
 }
+
+.eraser {
+  width: 100px;
+  margin-top: 20px;
+}
+
+img {
+  width: 100%;
+}
