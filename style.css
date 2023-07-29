@@ -22,7 +22,8 @@
   flex: auto;
 }
 
-.eraser {
+.eraser,
+#randomColors {
   width: 100px;
 }
 
@@ -44,4 +45,9 @@ img {
 
 [class^="column"]:hover {
   background-color: rgb(205, 229, 250);
+}
+
+#randomColors {
+  border: 4px solid;
+  border-color: transparent;
 }
